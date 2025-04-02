@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PlanHero</string>
+    <string name="input_login">Введіть логін</string>
+    <string name="input_password">Введіть пароль</string>
+    <string name="sign_in">Вхід</string>
+    <string name="sign_up">Створити акаунт</string>
 </resources>

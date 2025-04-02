@@ -1,4 +1,4 @@
-package com.example.planhero.presentation.sign_in_screen.content
+package com.example.planhero.presentation.sign_in_screen.component
 
 import androidx.compose.runtime.Composable
 

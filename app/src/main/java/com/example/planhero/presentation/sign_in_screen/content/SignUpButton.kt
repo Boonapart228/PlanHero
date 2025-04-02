@@ -1,0 +1,25 @@
+package com.example.planhero.presentation.sign_in_screen.content
+
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.planhero.R
+
+@Composable
+fun SignUpButton(
+    modifier: Modifier = Modifier
+) {
+    OutlinedButton(onClick = { /*TODO*/ }, modifier = modifier.fillMaxWidth()) {
+        Text(text = stringResource(id = R.string.sign_up))
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+fun SignUpButtonPreview() {
+    SignUpButton()
+}

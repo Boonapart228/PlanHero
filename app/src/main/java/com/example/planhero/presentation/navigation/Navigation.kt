@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.planhero.presentation.navigation.model.Screens
 import com.example.planhero.presentation.sign_up_screen.content.SignUpContent
-import com.example.planhero.presentation.sign_in_screen.content.SignInScreen
+import com.example.planhero.presentation.sign_in_screen.component.SignInScreen
 
 @Composable
 fun Navigation(modifier: Modifier) {
