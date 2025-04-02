@@ -19,9 +19,9 @@ import com.example.planhero.ui.theme.LocalDimen
 fun SignUpContent() {
     Scaffold(
         topBar = { SignUpTopBar() }
-    ) {
+    ) { innerPadding ->
         Column(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.fillMaxSize().padding(innerPadding),
             verticalArrangement = Arrangement.spacedBy(
                 LocalDimen.current.columnSpaceBy,
                 Alignment.CenterVertically
