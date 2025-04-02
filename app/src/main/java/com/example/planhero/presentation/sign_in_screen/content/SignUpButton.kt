@@ -14,7 +14,7 @@ fun SignUpButton(
     modifier: Modifier = Modifier
 ) {
     OutlinedButton(onClick = { /*TODO*/ }, modifier = modifier.fillMaxWidth()) {
-        Text(text = stringResource(id = R.string.sign_up))
+        Text(text = stringResource(id = R.string.registration))
     }
 }
 
