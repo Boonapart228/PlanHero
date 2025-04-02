@@ -10,5 +10,5 @@ val LocalDimen = compositionLocalOf {
 
 data class Dimensions(
     val horizontalPadding: Dp = 12.dp,
-    val signInColumnSpaceBy: Dp = 16.dp
+    val columnSpaceBy: Dp = 16.dp
 )

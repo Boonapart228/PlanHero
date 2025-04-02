@@ -19,7 +19,7 @@ fun SignInContent() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(
-            LocalDimen.current.signInColumnSpaceBy,
+            LocalDimen.current.columnSpaceBy,
             Alignment.CenterVertically
         ),
         horizontalAlignment = Alignment.CenterHorizontally,
