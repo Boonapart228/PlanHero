@@ -7,9 +7,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.planhero.presentation.navigation.model.Screens
-import com.example.planhero.presentation.sign_up_screen.components.SignUpContent
 import com.example.planhero.presentation.sign_in_screen.component.SignInScreen
 import com.example.planhero.presentation.sign_in_screen.component.SignInViewModel
+import com.example.planhero.presentation.sign_up_screen.components.SignUpScreen
+import com.example.planhero.presentation.sign_up_screen.components.SignUpViewModel
 
 @Composable
 fun Navigation(modifier: Modifier) {
@@ -27,7 +28,11 @@ fun Navigation(modifier: Modifier) {
             )
         }
         composable(route = Screens.SIGN_UP_SCREEN.route) {
-            SignUpContent()
+            val viewModel: SignUpViewModel = viewModel()
+            SignUpScreen(
+                viewModel = viewModel,
+                navigateToSignIn = { navController.navigate(Screens.SIGN_IN_SCREEN.route) }
+            )
         }
     }
 }
