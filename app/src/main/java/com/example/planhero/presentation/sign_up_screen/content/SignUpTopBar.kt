@@ -14,10 +14,10 @@ import com.example.planhero.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SignUpTopBar() {
+fun SignUpTopBar(navigateToSignIn: () -> Unit) {
     CenterAlignedTopAppBar(title = { Text(text = stringResource(id = R.string.registration)) },
         navigationIcon = {
-            IconButton(onClick = { }) {
+            IconButton(onClick = navigateToSignIn) {
                 Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
             }
         })
@@ -26,5 +26,5 @@ fun SignUpTopBar() {
 @Composable
 @Preview
 fun SignUpTopBarPreview() {
-    SignUpTopBar()
+    SignUpTopBar(navigateToSignIn = {})
 }
