@@ -11,9 +11,10 @@ import com.example.planhero.R
 
 @Composable
 fun SignUpButton(
+    navigateToSignUpScreen: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    OutlinedButton(onClick = { /*TODO*/ }, modifier = modifier.fillMaxWidth()) {
+    OutlinedButton(onClick = navigateToSignUpScreen, modifier = modifier.fillMaxWidth()) {
         Text(text = stringResource(id = R.string.registration))
     }
 }
@@ -21,5 +22,5 @@ fun SignUpButton(
 @Composable
 @Preview(showBackground = true)
 fun SignUpButtonPreview() {
-    SignUpButton()
+    SignUpButton(navigateToSignUpScreen = {})
 }
