@@ -9,13 +9,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.planhero.R
+import com.example.planhero.presentation.navigation.model.Screens
 import com.example.planhero.presentation.sign_in_screen.content.SignInButton
 import com.example.planhero.presentation.sign_in_screen.content.SignInTextField
 import com.example.planhero.presentation.sign_in_screen.content.SignUpButton
 import com.example.planhero.ui.theme.LocalDimen
 
 @Composable
-fun SignInContent() {
+fun SignInContent(
+    state: SignInState,
+    setLogin: (String) -> Unit,
+    setPassword: (String) -> Unit,
+    navigateToSignUpScreen: (Screens) -> Unit
+) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(
@@ -25,19 +31,22 @@ fun SignInContent() {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         SignInTextField(
-            value = "",
+            value = state.login,
             textId = R.string.input_login,
-            onValueChange = {},
+            onValueChange = setLogin,
             modifier = Modifier.padding(horizontal = LocalDimen.current.horizontalPadding)
         )
         SignInTextField(
-            value = "",
+            value = state.password,
             textId = R.string.input_password,
-            onValueChange = {},
+            onValueChange = setPassword,
             modifier = Modifier.padding(horizontal = LocalDimen.current.horizontalPadding)
         )
         SignInButton(modifier = Modifier.padding(horizontal = LocalDimen.current.horizontalPadding))
-        SignUpButton(modifier = Modifier.padding(horizontal = LocalDimen.current.horizontalPadding))
+        SignUpButton(
+            navigateToSignUpScreen = { navigateToSignUpScreen(Screens.SIGN_UP_SCREEN) },
+            modifier = Modifier.padding(horizontal = LocalDimen.current.horizontalPadding)
+        )
     }
 }
 
@@ -47,5 +56,9 @@ fun SignInContent() {
     showBackground = true
 )
 fun SignInContentPreview() {
-    SignInContent()
+    SignInContent(
+        state = SignInState(),
+        setLogin = {},
+        setPassword = {},
+        navigateToSignUpScreen = {})
 }
