@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -52,6 +53,12 @@ android {
 }
 
 dependencies {
+    //Firebase Bom
+    implementation(platform(libs.firebase.bom))
+
+    //Firebase Auth
+    implementation(libs.firebase.auth)
+
     //Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)

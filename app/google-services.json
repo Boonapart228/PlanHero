@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "745358838834",
+    "project_id": "plane-hero",
+    "storage_bucket": "plane-hero.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745358838834:android:e912766dc2166e59bb002b",
+        "android_client_info": {
+          "package_name": "com.example.planhero"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo3WpbdVTbitZ9bgXBgQ75V84H9hruF_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
