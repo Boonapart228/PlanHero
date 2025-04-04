@@ -2,7 +2,7 @@ package com.example.planhero.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -21,14 +21,14 @@ fun Navigation(modifier: Modifier) {
         modifier = modifier
     ) {
         composable(route = Screens.SIGN_IN_SCREEN.route) {
-            val viewModel: SignInViewModel = viewModel()
+            val viewModel: SignInViewModel = hiltViewModel()
             SignInScreen(
                 viewModel = viewModel,
                 navigateToSignUpScreen = { navController.navigate(Screens.SIGN_UP_SCREEN.route) }
             )
         }
         composable(route = Screens.SIGN_UP_SCREEN.route) {
-            val viewModel: SignUpViewModel = viewModel()
+            val viewModel: SignUpViewModel = hiltViewModel()
             SignUpScreen(
                 viewModel = viewModel,
                 navigateToSignIn = { navController.navigate(Screens.SIGN_IN_SCREEN.route) }
